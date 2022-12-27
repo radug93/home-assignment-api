@@ -19,3 +19,8 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+app:
+  jwtCookieName: appAuth
+  jwtSecret: appSecretKey
+  jwtExpirationMs: 86400000
