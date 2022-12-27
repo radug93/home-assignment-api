@@ -9,7 +9,11 @@ import java.util.Date;
 
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+
 public class Product {
 
     @Id

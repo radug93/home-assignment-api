@@ -13,6 +13,8 @@ import java.util.Set;
 import javax.persistence.*;
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),

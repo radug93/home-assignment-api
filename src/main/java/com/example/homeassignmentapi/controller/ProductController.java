@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/products")
 public class ProductController {
 
     @Autowired
@@ -19,6 +19,9 @@ public class ProductController {
 
     @PutMapping(value = "{id}")
     public ResponseEntity<Object> updateProduct(@PathVariable("id") Long id, @Valid @RequestBody ProductDTO product) {
+        // Not needed, just to proof Java11 functionalities
+        productService.checkIfCodeIsBlank(product);
+
         productService.updateProduct(id, product);
         return new ResponseEntity<>("Product is updated successfully", HttpStatus.OK);
     }

@@ -19,8 +19,18 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
-
+  output:
+    ansi:
+      enabled: always
 app:
   jwtCookieName: appAuth
   jwtSecret: appSecretKey
   jwtExpirationMs: 86400000
+
+logging:
+  level:
+    root: INFO
+  file:
+    name: appLogs.log
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green} %clr([%level]){magenta}  %c{1.} [%t] %m%n'
