@@ -9,5 +9,4 @@ public class HomeAssignmentApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HomeAssignmentApiApplication.class, args);
 	}
-
 }
