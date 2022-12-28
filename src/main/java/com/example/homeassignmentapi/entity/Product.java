@@ -20,7 +20,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "code", unique = true, nullable = false)
+    @Column(unique = true, nullable = false)
     private String code;
 
     private String name;
@@ -30,7 +30,7 @@ public class Product {
 
     private String imageUrl;
 
-    @Column(name = "active", nullable = false)
+    @Column(nullable = false)
     private Boolean active = false;
 
     @CreatedDate
